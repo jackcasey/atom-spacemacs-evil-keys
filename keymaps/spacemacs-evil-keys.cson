@@ -1,0 +1,40 @@
+# Keybindings require three things to be fully defined: A selector that is
+# matched against the focused element, the keystroke and the command to
+# execute.
+#
+# Below is a basic keybinding which registers on all platforms by applying to
+# the root workspace element.
+
+# For more detailed documentation see
+# https://atom.io/docs/latest/behind-atom-keymaps-in-depth
+
+'.tree-view, atom-text-editor.vim-mode:not(.insert-mode)':
+  'space f s'  : 'core:save'
+  'space :'    : 'command-palette:toggle'
+  'space b b'  : 'fuzzy-finder:toggle-buffer-finder'
+  'space s a p': 'fuzzy-grep:toggle'
+  'space p f'  : 'fuzzy-finder:toggle-file-finder'
+  'space b d'  : 'core:close'
+  'space q q'  : 'application:quit'
+  'space b n'  : 'pane:show-next-item'
+  'space b p'  : 'pane:show-previous-item'
+  'space w w'  : 'window:focus-next-pane'
+  'space w s'  : 'pane:split-down'
+  'space w v'  : 'pane:split-right'
+  'space w c'  : 'pane:close'
+  'space f t'  : 'tree-view:toggle'
+  'space p t'  : 'tree-view:toggle'
+  'space g s'  : 'git-plus:status'
+  'space g b'  : 'git-blame:toggle'
+  'space g h n': 'git-diff:move-to-next-diff'
+  'space g h p': 'git-diff:move-to-previous-diff'
+  'space 1'    : 'window:focus-pane-on-left'
+  'space 2'    : 'window:focus-pane-on-right'
+  'space e n'  : 'linter:next-error'
+  'space e p'  : 'linter:previous-error'
+  'space e N'  : 'linter:previous-error'
+  'space e e'  : 'linter:lint'
+  'space t m f': 'linter:toggle'
+
+'atom-text-editor.vim-mode.insert-mode':
+  'f d': 'vim-mode:activate-normal-mode'
