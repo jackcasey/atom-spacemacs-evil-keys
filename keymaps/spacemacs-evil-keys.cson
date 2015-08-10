@@ -35,6 +35,12 @@
   'space e N'  : 'linter:previous-error'
   'space e e'  : 'linter:lint'
   'space t m f': 'linter:toggle'
+  'space g q':   'autoflow:reflow-selection'
+  'space a k' :  'application:open-your-keymap'
+  'space a r' :  'window:reload'
+  'space a s' :  'application:show-settings'
+  'space t n' :  'editor:toggle-line-numbers'
+  'space w m' :  'maximize-panes:maximize'
 
 'atom-text-editor.vim-mode.insert-mode':
   'f d': 'vim-mode:activate-normal-mode'
