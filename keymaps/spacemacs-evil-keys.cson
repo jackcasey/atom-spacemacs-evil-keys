@@ -9,38 +9,68 @@
 # https://atom.io/docs/latest/behind-atom-keymaps-in-depth
 
 '.tree-view, atom-text-editor.vim-mode:not(.insert-mode)':
+  # core app stuff
   'space f s'  : 'core:save'
+  'space b d'  : 'core:close'
+  'space q q'  : 'application:quit'
+  'space a k' :  'application:open-your-keymap'
+  'space a r' :  'window:reload'
+  'space a s' :  'application:show-settings'
+
+  # file and command palette
   'space :'    : 'command-palette:toggle'
   'space b b'  : 'fuzzy-finder:toggle-buffer-finder'
   'space s a p': 'fuzzy-grep:toggle'
   'space p f'  : 'fuzzy-finder:toggle-file-finder'
-  'space b d'  : 'core:close'
-  'space q q'  : 'application:quit'
+  'space f y'  :  'editor:copy-path'
+
+  # windows/panes
+  'space 1'    : 'window:focus-pane-on-left'
+  'space 2'    : 'window:focus-pane-on-right'
   'space b n'  : 'pane:show-next-item'
   'space b p'  : 'pane:show-previous-item'
   'space w w'  : 'window:focus-next-pane'
+  'space w m' :  'maximize-panes:maximize'
   'space w s'  : 'pane:split-down'
   'space w v'  : 'pane:split-right'
   'space w c'  : 'pane:close'
   'space f t'  : 'tree-view:toggle'
   'space p t'  : 'tree-view:toggle'
+  'space f f'  : 'tree-view:reveal-active-file'
+
+
+  # git
   'space g s'  : 'git-plus:status'
   'space g b'  : 'git-blame:toggle'
   'space g h n': 'git-diff:move-to-next-diff'
   'space g h p': 'git-diff:move-to-previous-diff'
-  'space 1'    : 'window:focus-pane-on-left'
-  'space 2'    : 'window:focus-pane-on-right'
+
+  # lint / annotations
   'space e n'  : 'linter:next-error'
   'space e p'  : 'linter:previous-error'
   'space e N'  : 'linter:previous-error'
   'space e e'  : 'linter:lint'
   'space t m f': 'linter:toggle'
-  'space g q':   'autoflow:reflow-selection'
-  'space a k' :  'application:open-your-keymap'
-  'space a r' :  'window:reload'
-  'space a s' :  'application:show-settings'
+  'space e t'  : 'linter:toggle'
+
+  # editor view options
   'space t n' :  'editor:toggle-line-numbers'
-  'space w m' :  'maximize-panes:maximize'
+  'space t i' :  'editor:toggle-indent-guide'
+  'space t w' :  'editor:toggle-soft-wrap'
+
+  # bookmarks
+  'space j m': 'bookmarks:toggle-bookmark'
+  'space j c': 'bookmarks:clear-bookmarks'
+  'space j n': 'bookmarks:jump-to-next-bookmark'
+  'space j p': 'bookmarks:jump-to-previous-bookmark'
+
+  # misc actions
+  'space g q' :  'autoflow:reflow-selection'
 
 'atom-text-editor.vim-mode.insert-mode':
   'f d': 'vim-mode:activate-normal-mode'
+  'j k': 'vim-mode:activate-normal-mode'
+
+'.tree-view':
+  'space space': 'tree-view:reveal-active-file'
+  'space f f':   'tree-view:reveal-active-file'
