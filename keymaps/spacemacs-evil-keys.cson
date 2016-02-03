@@ -8,7 +8,7 @@
 # For more detailed documentation see
 # https://atom.io/docs/latest/behind-atom-keymaps-in-depth
 
-'.tree-view, atom-text-editor.vim-mode:not(.insert-mode)':
+'.tree-view, atom-text-editor.vim-mode-plus:not(.insert-mode)':
   # core app stuff
   'space f s'  : 'core:save'
   'space b d'  : 'core:close'
@@ -20,9 +20,12 @@
   # file and command palette
   'space :'    : 'command-palette:toggle'
   'space b b'  : 'fuzzy-finder:toggle-buffer-finder'
+  'space g f'  : 'fuzzy-finder:toggle-git-status-finder'
   'space s a p': 'fuzzy-grep:toggle'
-  'space p f'  : 'fuzzy-finder:toggle-file-finder'
-  'space f y'  :  'editor:copy-path'
+  'space s s'  : 'fuzzy-grep:toggleLastSearch'
+  'space p f'  : 'fuzzy-findertoggle-file-finder'
+  'space r f'  : 'recent-finder:toggle'
+  'space f y'  : 'editor:copy-path'
 
   # windows/panes
   'space 1'    : 'window:focus-pane-on-left'
@@ -41,9 +44,10 @@
 
   # git
   'space g s'  : 'git-plus:status'
-  'space g b'  : 'git-blame:toggle'
+  'space g b'  : 'blame:toggle'
   'space g h n': 'git-diff:move-to-next-diff'
   'space g h p': 'git-diff:move-to-previous-diff'
+  'space g h l': 'git-diff:toggle-diff-list'
 
   # lint / annotations
   'space e n'  : 'linter:next-error'
@@ -52,11 +56,13 @@
   'space e e'  : 'linter:lint'
   'space t m f': 'linter:toggle'
   'space e t'  : 'linter:toggle'
+  'space t e'  : 'linter:toggle'
 
   # editor view options
   'space t n' :  'editor:toggle-line-numbers'
   'space t i' :  'editor:toggle-indent-guide'
   'space t w' :  'editor:toggle-soft-wrap'
+  'space t v' :  'window:toggle-invisibles'
 
   # bookmarks
   'space j m': 'bookmarks:toggle-bookmark'
@@ -67,10 +73,5 @@
   # misc actions
   'space g q' :  'autoflow:reflow-selection'
 
-'atom-text-editor.vim-mode.insert-mode':
-  'f d': 'vim-mode:activate-normal-mode'
-  'j k': 'vim-mode:activate-normal-mode'
-
 '.tree-view':
   'space space': 'tree-view:reveal-active-file'
-  'space f f':   'tree-view:reveal-active-file'

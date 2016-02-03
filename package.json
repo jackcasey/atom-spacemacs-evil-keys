@@ -11,6 +11,6 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
-    "vim-mode": ">=0.1.0"
+    "vim-mode-plus": ">=0.1.10"
   }
 }
