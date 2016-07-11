@@ -1,4 +1,4 @@
 {CompositeDisposable} = require 'atom'
 
-module.exports = Spacematom =
+module.exports =
   activate: (state) ->
