@@ -8,46 +8,61 @@
 # For more detailed documentation see
 # https://atom.io/docs/latest/behind-atom-keymaps-in-depth
 
-'.tree-view, atom-text-editor.vim-mode-plus:not(.insert-mode)':
+'background-tips, .tree-view, atom-text-editor.vim-mode-plus:not(.insert-mode)':
   # core app stuff
-  'space f s'  : 'core:save'
-  'space b d'  : 'core:close'
-  'space q q'  : 'application:quit'
-  'space a k' :  'application:open-your-keymap'
-  'space a r' :  'window:reload'
-  'space a s' :  'application:show-settings'
+  'space f s': 'core:save'
+  'space b d': 'core:close' # buffer delete
+  'space b c': 'core:close' # buffer close
+  'space q q': 'application:quit'
+  'space a k': 'application:open-your-keymap'
+  'space a r': 'window:reload'
+  'space a s': 'application:show-settings'
 
   # file and command palette
   'space :'    : 'command-palette:toggle'
   'space b b'  : 'fuzzy-finder:toggle-buffer-finder'
+  'space b f'  : 'fuzzy-finder:toggle-buffer-finder'
   'space g f'  : 'fuzzy-finder:toggle-git-status-finder'
   'space s a p': 'fuzzy-grep:toggle'
   'space s s'  : 'fuzzy-grep:toggleLastSearch'
-  'space p f'  : 'fuzzy-findertoggle-file-finder'
-  'space r f'  : 'recent-finder:toggle'
-  'space f y'  : 'editor:copy-path'
+  'space f f'  : 'fuzzy-finder:toggle-file-finder'
+  'space p f'  : 'fuzzy-finder:toggle-file-finder'
+  'space f r'  : 'recent-finder:toggle'
+  'space f y'  : 'editor:copy-project-path'
 
   # windows/panes
-  'space 1'    : 'window:focus-pane-on-left'
-  'space 2'    : 'window:focus-pane-on-right'
-  'space b n'  : 'pane:show-next-item'
-  'space b p'  : 'pane:show-previous-item'
-  'space w w'  : 'window:focus-next-pane'
-  'space w m' :  'maximize-panes:maximize'
-  'space w s'  : 'pane:split-down'
-  'space w v'  : 'pane:split-right'
-  'space w c'  : 'pane:close'
-  'space f t'  : 'tree-view:toggle'
-  'space p t'  : 'tree-view:toggle'
-  'space f f'  : 'tree-view:reveal-active-file'
+  'space 1'  : 'window:focus-pane-on-left'
+  'space 2'  : 'window:focus-pane-on-right'
+  'space b n': 'pane:show-next-item'             # 'buffer next'
+  'space b p': 'pane:show-previous-item'         # 'butter preview'
+  'space w w': 'window:focus-next-pane'
+  'space w m': 'maximize-panes:maximize'         # 'window maximise'
+  'space w s': 'pane:split-down'                 # 'window split'
+  'space w v': 'pane:split-right'                # 'window verticle split'
+  'space w c': 'pane:close'                      # 'window close' ('vim' window)
+  'space s c': 'window:close'                    # 'screen close'
+  'space t t': 'tree-view:toggle'                # 'files toggle'
+  'space p t': 'tree-view:toggle'                # 'project toggle'
+  'space f t': 'tree-view:reveal-active-file'    # 'file reveal'
 
+  # Surround family
+  'space y s'  : 'vim-mode-plus:surround'
+  'space y s w': 'vim-mode-plus:surround-word'
+  'space y m s': 'vim-mode-plus:map-surround'
+  'space d S'  : 'vim-mode-plus:delete-surround'
+  'space d s'  : 'vim-mode-plus:delete-surround-any-pair'
+  'space c S'  : 'vim-mode-plus:change-surround'
+  'space c s'  : 'vim-mode-plus:change-surround-any-pair'
 
-  # git
+  # git commands
   'space g s'  : 'git-plus:status'
   'space g b'  : 'blame:toggle'
   'space g h n': 'git-diff:move-to-next-diff'
   'space g h p': 'git-diff:move-to-previous-diff'
   'space g h l': 'git-diff:toggle-diff-list'
+  'space g g'  : 'git-plus:menu'
+  'space g d'  : 'git-plus:diff'
+  'space g t'  : 'git-time-machine:toggle'
 
   # lint / annotations
   'space e n'  : 'linter:next-error'
@@ -56,13 +71,12 @@
   'space e e'  : 'linter:lint'
   'space t m f': 'linter:toggle'
   'space e t'  : 'linter:toggle'
-  'space t e'  : 'linter:toggle'
 
   # editor view options
-  'space t n' :  'editor:toggle-line-numbers'
-  'space t i' :  'editor:toggle-indent-guide'
-  'space t w' :  'editor:toggle-soft-wrap'
-  'space t v' :  'window:toggle-invisibles'
+  'space t n': 'editor:toggle-line-numbers'
+  'space t i': 'editor:toggle-indent-guide'
+  'space t w': 'editor:toggle-soft-wrap'
+  'space t v': 'window:toggle-invisibles'
 
   # bookmarks
   'space j m': 'bookmarks:toggle-bookmark'
@@ -71,7 +85,5 @@
   'space j p': 'bookmarks:jump-to-previous-bookmark'
 
   # misc actions
-  'space g q' :  'autoflow:reflow-selection'
-
-'.tree-view':
-  'space space': 'tree-view:reveal-active-file'
+  'space g q'  : 'autoflow:reflow-selection'
+  'space space': 'easy-motion-redux:words_starting'
