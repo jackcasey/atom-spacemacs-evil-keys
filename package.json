@@ -1,7 +1,7 @@
 {
   "name": "spacemacs-evil-keys",
   "main": "./lib/spacemacs-evil-keys",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Adds spacemacs style evil-mode keybindings.",
   "keywords": [
     "spacemacs",
