@@ -2,7 +2,7 @@
 
 Adds sequence-style key-bindings with space as the leader key for a bunch of commands. These are based on and, where possible, identical to the default evil mode key-bindings found in spacemacs.
 
-This package includes key-bindings for various built in atom operations and for some third party plugins that I use.
+This package includes key-bindings for various built in atom operations and for some third party plugins that I use. (Most of which are by the marvellous [t9md](https://atom.io/users/t9md))
 
 * vim-mode-plus
 * atom-fuzzy-grep
@@ -12,3 +12,4 @@ This package includes key-bindings for various built in atom operations and for 
 * git-plus
 * git-time-machine
 * easy-motion-redux
+* narrow

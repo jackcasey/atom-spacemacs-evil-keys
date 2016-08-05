@@ -56,6 +56,8 @@
 
   # git commands
   'space g s'  : 'git-plus:status'
+  'space g a'  : 'git-plus:add'
+  'space g c'  : 'git-plus:commit'
   'space g b'  : 'blame:toggle'
   'space g h n': 'git-diff:move-to-next-diff'
   'space g h p': 'git-diff:move-to-previous-diff'
@@ -87,3 +89,12 @@
   # misc actions
   'space g q'  : 'autoflow:reflow-selection'
   'space space': 'easy-motion-redux:words_starting'
+
+# Bindings for 'Narrow' plugin
+'atom-text-editor.vim-mode-plus.normal-mode':
+  'space n l': 'narrow:lines'
+  'space n f': 'narrow:fold'
+  'space o': 'narrow:fold'
+  'space n s c': 'narrow:search-current-project'
+  'space n s s': 'narrow:search'
+  'space n c': 'narrow:focus'
