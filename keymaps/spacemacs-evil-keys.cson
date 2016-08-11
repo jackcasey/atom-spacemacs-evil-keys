@@ -35,11 +35,22 @@
   'space 2'  : 'window:focus-pane-on-right'
   'space b n': 'pane:show-next-item'             # 'buffer next'
   'space b p': 'pane:show-previous-item'         # 'butter preview'
-  'space w w': 'window:focus-next-pane'
-  'space w m': 'maximize-panes:maximize'         # 'window maximise'
-  'space w s': 'pane:split-down'                 # 'window split'
-  'space w v': 'pane:split-right'                # 'window verticle split'
-  'space w c': 'pane:close'                      # 'window close' ('vim' window)
+
+  'space w w':     'window:focus-next-pane'
+  'space w H':     'paner:split-left'
+  'space w J':     'paner:split-down'
+  'space w K':     'paner:split-up'
+  'space w L':     'paner:split-right'
+  'space w v':     'paner:split-right'
+  'space w c':     'pane:close'                  # 'window close' ('vim' window)
+  'space w x':     'paner:swap-item'
+  'space w X':     'paner:send-item'
+  'space w k':     'paner:very-top'
+  'space w j':     'paner:very-bottom'
+  'space w h':     'paner:very-left'
+  'space w l':     'paner:very-right'
+  'space w enter': 'vim-mode-plus:maximize-pane'
+
   'space s c': 'window:close'                    # 'screen close'
   'space t t': 'tree-view:toggle'                # 'files toggle'
   'space p t': 'tree-view:toggle'                # 'project toggle'
